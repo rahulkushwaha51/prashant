@@ -618,8 +618,9 @@ footer {
 
 /* profile css */
 
-.profile {
-    position: relative;
+#profile {
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .profile-user {
@@ -732,7 +733,7 @@ footer {
     cursor: pointer;
 }
 
-.event-overview-btn.active{
+.event-overview-btn.active {
     background-color: var(--bg-color);
     color: var(--text-color);
 }
@@ -917,8 +918,80 @@ footer {
 
 .event-section {
     display: none;
+    overflow: hidden;
 }
 
+
+
+/* booking recieved */
+.table-container {
+    width: 100%;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.146);
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: max-content;
+}
+
+.cell {
+    flex: 1;
+    padding: 8px;
+    text-align: left;
+}
+
+.cell-button {
+    display: flex;
+    gap: 5rem;
+    padding: .5rem 9rem;
+    padding-bottom: 2rem;
+}
+
+.approve-btn {
+    background-color: green;
+    color: var(--text-color);
+    padding: .2rem 2rem;
+    border-radius: .2rem;
+}
+
+.reject-btn {
+    background-color: red;
+    color: var(--text-color);
+    padding: .2rem .5rem;
+    border-radius: .2rem;
+}
+
+.header {
+    font-weight: bold;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.146);
+}
+
+.header .cell {
+    padding-top: 1rem;
+
+}
+
+.checkbox {
+    width: 20px;
+    padding: .5rem;
+    text-align: center;
+}
+
+.event-section-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.export-buttons {
+    display: flex;
+    gap: 21rem;
+    justify-content: space-between;
+}
 
 @media (max-width: 720px) {
     .profile-user {
