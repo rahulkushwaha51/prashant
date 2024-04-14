@@ -618,6 +618,10 @@ footer {
 
 /* profile css */
 
+.content-page {
+    padding-left: 2rem;
+}
+
 #profile {
     max-width: 100%;
     overflow: hidden;
@@ -641,7 +645,7 @@ footer {
 .profile-user-details {
     display: flex;
     gap: 2rem;
-    padding: 1rem 2rem;
+    padding: 1rem 0;
     position: relative;
 }
 
@@ -651,7 +655,7 @@ footer {
 
 .profile-button {
     position: absolute;
-    left: 5%;
+    left: 0;
     top: 100%;
     padding: .5rem;
     border: .1rem solid rgba(0, 0, 0, 0.29);
@@ -909,20 +913,58 @@ footer {
     font-weight: 600;
 }
 
-/* .overview {
-    display: none;
-}
-.overview.active {
-    display: block;
-} */
-
 .event-section {
     display: none;
     overflow: hidden;
 }
 
+.event-search {
+    padding: .5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
 
+.event-search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-color-second);
+    padding: .5rem 2rem;
+    border-radius: .3rem;
+    width: 50%;
+}
 
+.event-search input {
+    padding: 0 1rem;
+    background: transparent;
+}
+
+.event-search input[type="text"] {
+    padding: 0 1rem;
+    background: transparent;
+}
+.event-search-btn{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.event-search-btn button{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.event-search-btn button span{
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transform: rotate(90deg);
+}
 /* booking recieved */
 .table-container {
     width: 100%;
@@ -930,18 +972,20 @@ footer {
     border-bottom: 2px solid rgba(0, 0, 0, 0.146);
 }
 
+
+
 .row {
     display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+    flex-wrap: nowrap;
 }
 
 .cell {
-    width: max-content;
-}
-
-.cell {
+    padding-top: 1rem;
     flex: 1;
-    padding: 8px;
     text-align: left;
+
 }
 
 .cell-button {
@@ -965,20 +1009,34 @@ footer {
     border-radius: .2rem;
 }
 
+.resume-btn {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: .5rem 2.5rem;
+    border-radius: .2rem;
+}
+
+.row .resume-btn {
+    margin: 2rem 0 2rem 8rem;
+    
+}
+
 .header {
     font-weight: bold;
     border-bottom: 1px solid rgba(0, 0, 0, 0.146);
 }
 
-.header .cell {
-    padding-top: 1rem;
 
+.checkbox input[type="checkbox"] {
+    cursor: pointer;
+    width: 1rem;
+    height: .8rem;
+    text-align: left;
+    padding: .5rem;
 }
 
-.checkbox {
-    width: 20px;
-    padding: .5rem;
-    text-align: center;
+.checkbox input[type="checkbox"]:checked {
+    color: blue;
 }
 
 .event-section-footer {
@@ -991,6 +1049,46 @@ footer {
     display: flex;
     gap: 21rem;
     justify-content: space-between;
+}
+
+.export-buttons button {
+    font-size: 1rem;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.46);
+    background: transparent;
+}
+
+.export-buttons-inner button {
+    padding: 0 1rem;
+}
+
+.pagination {
+    padding: 1rem;
+
+    background: transparent;
+}
+
+.pagination button {
+    background: transparent;
+}
+
+.first,
+.last,
+.previous,
+.next {
+    background: transparent;
+    padding: 0 .2rem;
+}
+
+.pagination .page-number {
+    padding: .2rem .5rem;
+    background: var(--bg-color-second);
+    border-radius: .2rem;
+}
+
+.pagination button:nth-child(3) {
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 
 @media (max-width: 720px) {

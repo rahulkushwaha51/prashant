@@ -50,10 +50,16 @@ document.addEventListener("DOMContentLoaded", function () {
     tabs.forEach(tab => {
         tab.addEventListener('click', function () {
             const target = this.getAttribute('data-target');
+            tabs.forEach(otherTab => {
+                if (otherTab !== tab) {
+                    otherTab.classList.remove('active');
+                }
+            });
+            this.classList.toggle('active');
             showSection(target);
         });
     });
-console.log(sections)
+
     function showSection(target) {
         sections.forEach(section => {
             if (section.getAttribute('id') === target) {
