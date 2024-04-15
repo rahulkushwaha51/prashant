@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     showPage('home');
-    var profileLink = document.querySelector('a[href="#profile"]');
+    const profileLink = document.querySelector('a[href="#profile"]');
     if (profileLink) {
         profileLink.addEventListener('click', function (event) {
             event.preventDefault();
@@ -21,13 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    var homeLink = document.querySelector('a[href="#home"]');
+    const homeLink = document.querySelector('a[href="#home"]');
     if (homeLink) {
         homeLink.addEventListener('click', function (event) {
             event.preventDefault();
             showPage('home');
         });
     }
+
 });
 
 
@@ -74,4 +75,19 @@ document.addEventListener("DOMContentLoaded", function () {
     showSection('overview');
 });
 
+
+const popupbutton = document.querySelector(".popup-btn");
+const popup = document.getElementById('popup');
+const backbutton = document.querySelector(".back-btn")
+const overlay = document.querySelector(".overlay");
+
+popupbutton.addEventListener('click', () => {
+    // document.body.classList.add('blur');
+    popup.classList.toggle('active');
+    overlay.style.display = 'block';
+})
+backbutton.addEventListener('click', () => {
+    popup.classList.toggle('active');
+    overlay.style.display = 'none';
+})
 

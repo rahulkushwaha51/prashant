@@ -229,7 +229,7 @@
                             <h4>Discount Coupons</h4>
                             <div class="event-details-item-sub">
                                 <h5>Available</h5>
-                                <a href="">SEE DETAILS</a>
+                                <button class="popup-btn">SEE DETAILS</button>
                             </div>
                         </div>
                     </div>
@@ -331,12 +331,67 @@
                         <button class="btn">DUPLICATE EVENT</button>
                     </div>
                 </div>
+                <div class="overlay"></div>
+                <div class="popup" id="popup">
+                    <div class="popup-container">
+                        <h1>Coupon(s)</h1>
+                        <div class="coupon-popup">
+                            <div class="popup-content">
+                                <div class="popup-row header">
+                                    <h2>Coupon Details</h2>
+                                    <h2>Coupon Code</h2>
+                                    <h2>Status</h2>
+        
+                                </div>
+                                <div class="popup-row">
+                                    <p>10% Discount on Booth in hall 9</p>
+                                    <p>10HN9</p>
+                                    <p class="isactive">Active</p>
+        
+                                </div>
+                                <div class="popup-row">
+                                    <p>15% Discount on Booth in hall 4</p>
+                                    <p>14HN4</p>
+                                    <p class="paused">Paused</p>
+        
+                                </div>
+                                <div class="popup-row">
+                                    <p>10% Discount on overall</p>
+                                    <p>SAVE10</p>
+                                    <p class="isactive">Active</p>
+                                </div>
+                            </div>
+                            <div class="popup-action">
+                                <div class="action-row">
+                                    <button class="btn-secondry">Pause Code</button>
+                                    <button class="btn-secondry">Delete Code</button>
+                                </div>
+                                <div class="action-row">
+                                    <button class="btn-secondry">Resume Code</button>
+                                    <button class="btn-secondry">Delete Code</button>
+                                </div>
+                                <div class="action-row">
+                                    <button class="btn-secondry">Pause Code</button>
+                                    <button class="btn-secondry">Delete Code</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add-coupon">
+                            <h2>Add Coupon</h2>
+                            <input type="text" placeholder="Coupon Details" />
+                            <input type="text" placeholder="Coupon code" />
+                            <button class="btn-secondry">Add More</button>
+                        </div>
+                        <button class="btn-secondry back-btn">
+                            <span>
+                                < </span> Back</button>
+                    </div>
+                </div>
             </div>
             <div class="event-section" id="booking-recieved">
                 <div class="event-search">
                     <div class="event-search-box">
-                        <input type="text" placeholder="Search ..." /><i
-                            class="fa fa-search"></i>
+                        <input type="text" placeholder="Search ..." /><i class="fa fa-search"></i>
                     </div>
 
                     <div class="event-search-btn">
@@ -486,8 +541,7 @@
             <div class="event-section" id="booking-confirmed">
                 <div class="event-search">
                     <div class="event-search-box">
-                        <input type="text" placeholder="Search ..." /><i
-                            class="fa fa-search"></i>
+                        <input type="text" placeholder="Search ..." /><i class="fa fa-search"></i>
                     </div>
 
                     <div class="event-search-btn">
@@ -680,8 +734,7 @@
             <div class="event-section" id="booking-rejected">
                 <div class="event-search">
                     <div class="event-search-box">
-                        <input type="text" placeholder="Search ..." /><i
-                            class="fa fa-search"></i>
+                        <input type="text" placeholder="Search ..." /><i class="fa fa-search"></i>
                     </div>
 
                     <div class="event-search-btn">
@@ -823,8 +876,9 @@
 
 
         </div>
+       
     </div>
-
+    </div>
     </div>
     <!-- news  -->
     <div class="news">
@@ -835,6 +889,8 @@
             <button>SUBSCRIBE</button>
         </div>
     </div>
+
+
 
     <!-- footer -->
     <footer>
