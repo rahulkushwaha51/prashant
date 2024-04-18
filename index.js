@@ -28,6 +28,34 @@ document.addEventListener("DOMContentLoaded", function () {
             showPage('home');
         });
     }
+    const walletLink = document.querySelector('a[href="#wallet"]');
+    if (walletLink) {
+        walletLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            showPage('wallet');
+        });
+    }
+    const paymentLink = document.querySelector('a[href="#payment"]');
+    if (paymentLink) {
+        paymentLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            showPage('payment');
+        });
+    }
+    const appearenceLink = document.querySelector('a[href="#appearence"]');
+    if (appearenceLink) {
+        appearenceLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            showPage('appearence');
+        });
+    }
+    const eventdetailsLink = document.querySelector('a[href="#events-details"]');
+    if (eventdetailsLink) {
+        eventdetailsLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            showPage('events-details');
+        });
+    }
 
 });
 
@@ -61,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+
     function showSection(target) {
         sections.forEach(section => {
             if (section.getAttribute('id') === target) {
@@ -91,3 +120,32 @@ backbutton.addEventListener('click', () => {
     overlay.style.display = 'none';
 })
 
+const events = document.querySelector(".events");
+const analytics = document.getElementsByClassName("analytics");
+const analyticsbutton = document.querySelector('.analytics-btn')
+const backtoevent = document.querySelector('.back-to-events')
+
+analyticsbutton.addEventListener('click', () => {
+    events.style.display = 'none'
+    analytics[0].style.display = 'block'
+})
+
+backtoevent.addEventListener('click', () => {
+    events.style.display = 'block'
+    analytics[0].style.display = 'none'
+})
+
+
+const addmoneybtn = document.querySelector(".add-money-btn")
+const addmoney = document.getElementById('addmoney');
+const backbuttonmoney = document.querySelector(".back-btn-money")
+const overlaymoney = document.querySelector(".overlay-money");
+addmoneybtn.addEventListener('click', () => {
+    addmoney.style.display='block';
+    overlaymoney.style.display='block';
+   
+})
+backbuttonmoney.addEventListener('click', () => {
+    addmoney.style.display='none';
+    overlaymoney.style.display='none';
+})

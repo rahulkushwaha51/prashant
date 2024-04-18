@@ -52,6 +52,10 @@ a {
     display: none;
 }
 
+button {
+    cursor: pointer;
+}
+
 /* ---------- navigation css -------- */
 
 header {
@@ -596,14 +600,14 @@ footer {
 
 }
 
-.event {
+.event-name {
     background: var(--bg-color-second);
     margin-top: 4rem;
     padding: .5rem 1rem;
     border-radius: .3rem;
 }
 
-.event h2 {
+.event-name h2 {
     font-weight: 600;
     color: rgba(0, 0, 0, 0.516);
 }
@@ -663,6 +667,10 @@ footer {
     justify-content: center;
     align-items: flex-start;
     color: rgba(0, 0, 0, 0.46);
+}
+
+.event-details-item button {
+    color: var(--bg-color);
 }
 
 .event-details-item h4 {
@@ -998,26 +1006,13 @@ footer {
 /* popup */
 
 .popup {
-    min-width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 999;
-    /* background: rgb(0, 0, 0, .5); */
-    display: none;
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-    z-index: 5;
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, .5);
     display: none;
 }
 
@@ -1032,44 +1027,60 @@ footer {
     border-radius: 1rem;
     width: 65%;
     height: max-content;
-    margin: 5%;
+    padding: 0 2rem;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.619);
 }
 
 .popup-container h1 {
-    padding: 2rem 4rem 0;
+    padding: 2rem 1rem 0;
 }
 
-.coupon-popup {
+.overlay,
+.overlay-money {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    z-index: 999;
-    padding: 1rem 3rem;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 5;
+    display: none;
 }
 
-.popup-content {
-    padding: 0 1rem;
+.table {
     width: 100%;
+    padding: 1rem;
+    border-collapse: collapse;
 }
 
-.popup-row {
-    display: grid;
-    grid-template-columns: 3fr 2fr 1fr;
+.table thead th {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.345);
+    color: black;
 }
 
-.popup-row h2 {
-    flex: 1;
+.table th,
+.table td {
 
-}
-
-.popup-row p {
-    margin: 1rem 0;
+    padding: 1rem;
     text-align: left;
-    flex: 1;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.619);
 }
 
-.isactive {
+.table td button {
+    width: 7rem;
+    background: transparent;
+    border: none;
+    padding-right: 1rem;
+    text-align: left;
+    font-weight: 700;
+    color: black;
+
+}
+
+.table .isactive {
     color: green;
 }
 
@@ -1077,32 +1088,8 @@ footer {
     color: red;
 }
 
-.popup-row button {
-    background: transparent;
-    font-weight: 800;
-    font-size: 1rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    margin-bottom: 2rem;
-}
-
-.popup-action {
-    padding-top: 1.5rem;
-
-}
-
-.action-row {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 2rem;
-}
-
-.action-row button {
-    font-size: 1rem;
-}
-
 .add-coupon {
-    padding: 0 4rem;
+    padding: 0 1rem;
 }
 
 .add-coupon h2 {
@@ -1111,7 +1098,7 @@ footer {
 }
 
 .add-coupon input[type="text"] {
-    width: 25%;
+    width: 30%;
     background: var(--bg-color-second);
     border: 2px solid rgba(0, 0, 0, 0.459);
     border-radius: .2rem;
@@ -1129,10 +1116,687 @@ footer {
 }
 
 .back-btn {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.46);
+    padding: 1rem;
+}
+
+.analytics {
+    display: none;
+}
+
+.analytics img {
+    width: 100%;
+}
+
+.analytics-content {
+    width: 100%;
+    display: flex;
+    gap: 5rem;
+    padding-top: 2rem;
+}
+
+.analytics-content img {
+    width: 100%;
+}
+
+.status {
+    padding: 1rem 1rem;
+    position: relative;
+}
+
+.status h2 {
+    position: relative;
+    padding-left: 3rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.619);
+}
+
+.status h2::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0;
+    background-color: rgb(84, 209, 49);
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.status h2:nth-child(2)::before {
+    background-color: rgba(255, 170, 0, 0.911);
+}
+
+.status h2:nth-child(4)::before {
+    background-color: rgb(222, 40, 8);
+}
+
+.status h2:nth-child(3)::before {
+    background-color: cornflowerblue;
+}
+
+.booth-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+.booth-info p {
+    position: relative;
+}
+
+.booth-info p:nth-child(1)::before {
+    content: ":";
+    position: absolute;
+    left: 80%;
+}
+
+.events-action-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.back-to-events {
+    background: transparent;
+    color: rgba(0, 0, 0, 0.491);
+    margin: 1rem 1rem;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+/* wallet */
+
+.wallet {
+    padding: 1rem 2rem;
+}
+
+.wallet-content {
+    background-color: rgba(0, 0, 0, 0.046);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: .5rem;
+}
+
+.balance h2 {
+    color: var(--bg-color);
+}
+
+.wallet-content button {
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.transaction-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.transaction-heading button {
+    background: var(--bg-color-second);
+    padding: 0 .5rem;
+    border-radius: .3rem;
+}
+
+.transaction-heading button span {
+    display: inline-block;
+    transform: rotate(90deg);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.transaction-row {
+    padding: 1rem 0;
+}
+
+
+.transaction-cell {
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+
+    border-bottom: 2px solid rgba(0, 0, 0, 0.36);
+}
+
+.transaction-cell:nth-child(1) {
+    background: var(--bg-color-second);
+    border-radius: .5rem;
+    border: none;
+}
+
+.transaction-cell:nth-child(1) h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.transaction-cell h3 {
+    color: rgba(0, 0, 0, 0.46);
+}
+
+.transaction-cell h3:last-child {
+    color: green;
+}
+
+.payment-to {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+}
+
+.payment-to p {
+    font-weight: 400;
+}
+
+.payment-to h2 {
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.623);
+}
+
+.payment-acc h2 {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.619);
+}
+
+.payment-acc .payment-company {
+    color: var(--bg-color);
+}
+
+.payment-to img {
+    padding: .5rem 1rem;
+    border-radius: 5%;
+}
+
+/* addmoney */
+
+
+.addmoney {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 15%;
+    bottom: 0;
+    z-index: 999;
+    /* background: rgb(0, 0, 0, .5); */
+    display: none;
+}
+
+.addmoney.active {
+    display: block;
+    z-index: 100;
+    filter: none;
+}
+
+.addmoney-container {
+    background: white;
+    border-radius: 1rem;
+    width: 65%;
+    height: max-content;
+    margin: 5%;
+    padding: 5rem;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.619);
+}
+
+.addmoney h1 {
+    border-bottom: 2px solid var(--bg-color-second);
+}
+
+.payment-acc-to {
+    display: flex;
+    padding: 1.5rem 0 0;
+    gap: 5rem
+}
+
+.payment-acc-from {
+    display: flex;
+    padding: 1rem 0;
+    gap: 5rem;
+    border-bottom: 2px solid var(--bg-color-second);
+}
+
+.payment-acc-from .payment-company {
+    color: rgb(188, 81, 81);
+}
+
+.payment-acc-to .payment-company {
+    color: rgb(188, 81, 81);
+}
+
+.bank-details {
+    display: flex;
+    gap: 1rem;
+}
+
+.bank-address {
+    padding-top: 1rem;
+}
+
+.payment-to .bank-details img {
+    border: none;
+    padding: .6rem 0;
+    height: 5rem;
+}
+
+.form {
+    padding: 1rem 0;
+}
+
+.form .btn {
+    padding: .5rem 2rem;
+    margin-top: 2rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.form-cell label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-cell input[type="text"],
+.form-cell input[type="number"],
+.form-cell input[type="date"],
+.form-cell select {
+    width: 25rem;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: .3rem;
+    background-color: var(--bg-color-second);
+}
+
+.file-enter {
+    display: flex;
+}
+
+.file-label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+.file-label i {
+    margin-right: 5px;
+    background: var(--bg-color-second);
+    border-radius: .5rem;
+    padding: .5rem;
+}
+
+.file-input {
+    position: absolute;
+    left: -9999px;
+}
+
+.back-btn-money {
+    background: transparent;
+    display: block;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0, .6);
+    padding: 1rem 0;
+    margin: 0;
+}
+
+/* payment */
+
+.payment {
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.payment.active {
+    display: block;
+    z-index: 100;
+    filter: none;
+}
+
+.payment-container {
+    background: white;
+    width: 100%;
+    height: max-content;
+
+}
+
+.payment-heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+}
+
+.payment-heading h2 {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.769);
+}
+
+.payment-heading button {
+    padding: 0 .2rem;
+    border-radius: .2rem;
+    background: var(--bg-color-second);
+    font-size: .8rem;
+    height: max-content;
+}
+
+.payment-heading span {
+    display: inline-block;
+    transform: rotate(90deg);
+    color: #000;
+}
+
+.payment .table {
+    width: 100%;
+    padding: 1rem 2rem;
+    border-collapse: collapse;
+}
+
+.payment .table thead {
+    background-color: var(--bg-color-second);
+    border-radius: .5rem;
+}
+
+
+.payment .table th,
+.table td {
+    padding: 1rem;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.619);
+    border: none;
+
+}
+
+.payment .table td button {
+    width: max-content;
+    background: var(--bg-color);
+    border: none;
+    border-radius: .2rem;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.payment .table tr:nth-child(1) td button:nth-child(1),
+.payment .table tr:nth-child(1) td button:nth-child(2),
+.payment .table tr:nth-child(4) td button:nth-child(1),
+.payment .table tr:nth-child(4) td button:nth-child(2) {
+    background-color: var(--bg-color-second);
+    color: rgba(0, 0, 0, 0.619);
+}
+
+.payment .table tr:nth-child(2) td button:nth-child(2) {
+    background-color: green;
+}
+
+.payment .table tr:nth-child(3) td button:nth-child(2) {
+    background-color: green;
+}
+
+.payment .table tr:nth-child(5) td button:nth-child(2) {
+    background-color: green;
+}
+
+.table td:nth-child(2) {
+    border-right: 2px solid rgba(0, 0, 0, 0.619);
+}
+
+.table .payment-to {
+    display: flex;
+    align-items: center;
+}
+
+.table .isactive {
+    color: green;
+}
+
+.paused {
+    color: red;
+}
+
+
+.back-btn {
+    display: block;
+    margin-top: 1rem;
     font-size: 1.2rem;
     color: rgba(0, 0, 0, 0.46);
     padding: 1rem 4rem;
+}
 
+/* payment-management */
+#appearence {
+    display: none;
+}
+
+.payment-management {
+    padding: 1rem 2rem;
+}
+
+.payment-management h2 {
+    padding-bottom: 2rem;
+}
+
+.payment-management .btn {
+    padding: 1rem 3rem;
+    outline: 3px dotted var(--bg-color);
+}
+
+.saved-account {
+    display: flex;
+    /* justify-content: space-a; */
+    gap: 15rem;
+    padding: 3rem 0;
+}
+
+.saved-account .bank-details img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.saved-account .bank-details h2 {
+    color: rgba(0, 0, 0, 0.532);
+    padding-top: 2rem;
+    font-size: 1rem;
+}
+
+.saved-account .bank-name i {
+    margin-right: .5rem;
+    border-radius: 50%;
+}
+
+.selected-check i {
+    background: rgb(3, 174, 3);
+    border-radius: 50%;
+    color: white;
+}
+
+.payment-action-button {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.payment-action-button button:nth-child(2) {
+    display: inline-block;
+    color: red;
+    background: var(--bg-color);
+    color: white;
+    outline: none;
+    padding: .5rem 2rem;
+    border-radius: .2rem;
+}
+
+.payment-action-button button:nth-child(2) span {
+    cursor: pointer;
+    display: inline-block;
+    transform: scaleX(3);
+    padding-left: .5rem;
+}
+
+.payment-action-button button:nth-child(1) {
+    display: inline-block;
+    background: transparent;
+    outline: none;
+    border-radius: .2rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.532);
+    font-size: 1.2rem;
+}
+
+
+/* event-details */
+
+
+#event-details {
+    display: none;
+}
+
+.events-container .events-section {
+    display: block;
+}
+
+.events-container {
+    padding: 1rem 2rem;
+}
+
+.events-container h1 {
+    padding: 1rem 0;
+    color: var(--bg-color);
+}
+
+.events-container .events-overview .event-details {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.562);
+}
+
+.events-review .event-img {
+    padding: 1rem 0;
+}
+
+.reviews-row {
+    display: flex;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.reviews-details .ratings {
+    display: flex;
+    gap: .5rem;
+}
+
+.reviews-details .ratings {
+    display: flex;
+    gap: .5rem;
+}
+
+
+
+
+.reviews-details .ratings:nth-child(1) .progress::after {
+    width: 95%;
+}
+
+.reviews-details .ratings:nth-child(3) .progress::after {
+    width: 35%;
+}
+
+.reviews-details .ratings:nth-child(4) .progress::after {
+    width: 15%;
+    background: rgb(255, 208, 0);
+}
+
+.reviews-details .ratings:nth-child(5) .progress::after {
+    width: 25%;
+    background: red;
+}
+
+.reviews-details button {
+    color: var(--bg-color);
+    font-weight: 700;
+    background: transparent;
+    padding: .5rem 1rem;
+    border: 3px solid var(--bg-color);
+    border-radius: .2rem;
+    margin-top: 2rem;
+}
+
+
+.review-container h3 {
+    display: inline-block;
+    padding-left: 2rem;
+    margin: 2rem 0 1rem;
+}
+
+.review-container .star {
+    background-color: green;
+    padding: .2rem .4rem;
+    border-radius: .2rem;
+}
+
+.review-container .review-box {
+    padding: 2rem 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.review-container .review-box .box {
+    padding: 2rem 2.5rem;
+    background-color: var(--bg-color-second);
+}
+
+.review-container .review-by {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.review-container .review-by h2 {
+    color: rgba(0, 0, 0, 0.694);
+    font-size: 1rem;
+}
+
+.review-container .review-by div {
+    display: flex;
+    gap: 2rem;
+}
+
+.review-container .review-by p i {
+    margin-right: 1rem;
+}
+
+.review-container .review-by .fa-circle-check {
+    background: rgb(5, 236, 66);
+    border-radius: 50%;
+    border: none;
+    color: white;
+}
+
+.review-container:nth-of-type(3) .star {
+    background: rgb(236, 236, 5);
+
+}
+
+.review-container:nth-of-type(4) .star {
+    background: rgb(225, 11, 11);
 
 }
 
@@ -1270,9 +1934,11 @@ footer {
         padding: 0;
         gap: 2rem;
     }
-.profile-button{
-    left: 1rem;
-}
+
+    .profile-button {
+        left: 1rem;
+    }
+
     .profile-user-details {
         flex-direction: column;
         flex-wrap: wrap;
@@ -1333,11 +1999,19 @@ footer {
     }
 
     .event-details-item-sub {
-        gap: 0;
+        gap: 1rem;
+    }
+
+    .event-details-item-sub h5 {
+        font-size: .8rem;
+    }
+
+    .event-details-item h4 {
+        font-size: .8rem;
     }
 
     .event-details-item h4:nth-child(1)::after {
-        left: 95%;
+        left: 90%;
     }
 
     .progress {
@@ -1355,4 +2029,282 @@ footer {
         padding-bottom: 2rem;
     }
 
+    .analytics-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .status {
+        padding: 1rem 0;
+    }
+
+    .analytics {
+        padding-top: 2rem;
+    }
+
+    /* wallet */
+    .wallet {
+        padding: 1rem .5rem;
+    }
+
+    .transaction-cell {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        place-items: center;
+    }
+
+    /* addmoney */
+
+    .addmoney {
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    .addmoney-container {
+        padding: 2rem 1rem;
+        width: 100%;
+        margin: 0;
+    }
+
+    .form-row {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .form-cell {
+        width: 100%;
+    }
+
+    .payment-acc-to,
+    .payment-acc-from {
+        max-width: 100%;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .form-cell input[type="text"],
+    .form-cell input[type="number"],
+    .form-cell input[type="date"],
+    .form-cell select {
+        width: 100%;
+    }
+
+    /* popup */
+
+    .popup {
+        left: 0;
+    }
+
+    .popup-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .table thead {
+        display: none;
+    }
+
+    .table {
+        padding: 0;
+    }
+
+    .table,
+    .table tr,
+    .table td {
+        width: 100%;
+        display: inline-block;
+        position: relative;
+
+    }
+
+    .table tbody tr td {
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .table tbody tr td::before {
+        content: attr(data-label);
+        ;
+        position: absolute;
+        left: 0;
+        width: 50%;
+        font-weight: 600;
+        font-size: 1rem;
+        text-align: left;
+        padding-left: 1rem;
+    }
+
+    .back-btn {
+        text-align: center;
+        display: block;
+        margin-bottom: 3rem;
+        padding: 1rem;
+    }
+
+    .add-coupon input[type="text"] {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .add-coupon button {
+        margin: 0;
+    }
+
+    .table td button {
+        padding: 0;
+        margin: 0;
+        text-align: right;
+    }
+
+
+    /* payment */
+    .payment .table {
+        padding: 0;
+    }
+
+    .payment-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .table thead {
+        display: none;
+    }
+
+    .table,
+    .table tr,
+    .table td {
+        width: 100%;
+        display: inline-block;
+        position: relative;
+    }
+
+
+
+    .table tbody tr td {
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .payment .table tr {
+        border: none;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.46);
+    }
+
+    .table tbody tr td::before {
+        content: attr(data-label);
+        ;
+        position: absolute;
+        left: 0;
+        width: 50%;
+        font-weight: 600;
+        font-size: 1rem;
+        text-align: left;
+
+    }
+
+    .table td:nth-child(2) {
+        border: none;
+    }
+
+    .table .payment-to {
+        flex-direction: column;
+
+    }
+
+    .table .payment-to img {
+        flex-direction: column;
+        padding: 0;
+        text-align: center;
+        margin-left: 7rem;
+
+    }
+
+    .payment .table td button {
+        margin-top: 1rem;
+    }
+
+    .payment-heading {
+        display: block;
+    }
+
+
+    .back-btn {
+        text-align: center;
+        display: block;
+        margin-bottom: 3rem;
+    }
+
+
+    /* payment-management */
+    .saved-account {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .payment-action-button button:nth-child(1) {
+        text-align: left;
+        padding: none;
+    }
+
+    /* event-details */
+
+    .events-container {
+        padding: 1rem .5rem;
+    }
+
+    .events-container .event-img img {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .reviews-row {
+        flex-direction: column;
+    }
+
+    .reviews-details p {
+        display: inline;
+        padding-right: .2rem;
+    }
+
+    .ratings .progress {
+        display: inline;
+        width: 70%;
+    }
+
+    .reviews-details button {
+        margin: 0;
+    }
+
+    .review-container {
+        padding-top: 2rem;
+    }
+
+    .review-container h3 {
+        padding: 0;
+    }
+
+    .review-container .review-by {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: left;
+        align-items: flex-start;
+        padding-bottom: 1rem;
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
+
+    .review-container .review-box{
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+    .review-container .review-box .box{
+        padding: 1rem;
+
+    }
 }
