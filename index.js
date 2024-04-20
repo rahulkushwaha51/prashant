@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (pageToShow) {
             pageToShow.style.display = 'block';
         }
+
     }
     showPage('home');
     const profileLink = document.querySelector('a[href="#profile"]');
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         profileLink.addEventListener('click', function (event) {
             event.preventDefault();
             showPage('profile');
+            document.querySelector('.sidebar-submenu').classList.toggle('active');
         });
     }
 
@@ -26,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         homeLink.addEventListener('click', function (event) {
             event.preventDefault();
             showPage('home');
+            document.querySelector('.bottom-nav').classList.toggle('active');
         });
     }
     const walletLink = document.querySelector('a[href="#wallet"]');
@@ -40,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         paymentLink.addEventListener('click', function (event) {
             event.preventDefault();
             showPage('payment');
+            document.querySelector('.sidebar-submenu').classList.toggle('active');
         });
     }
     const appearenceLink = document.querySelector('a[href="#appearence"]');
@@ -47,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
         appearenceLink.addEventListener('click', function (event) {
             event.preventDefault();
             showPage('appearence');
+            document.querySelector('.sidebar-submenu').classList.toggle('active');
         });
     }
     const eventdetailsLink = document.querySelector('a[href="#events-details"]');
@@ -54,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         eventdetailsLink.addEventListener('click', function (event) {
             event.preventDefault();
             showPage('events-details');
+            document.querySelector('.bottom-nav').classList.toggle('active');
         });
     }
 
@@ -141,11 +147,11 @@ const addmoney = document.getElementById('addmoney');
 const backbuttonmoney = document.querySelector(".back-btn-money")
 const overlaymoney = document.querySelector(".overlay-money");
 addmoneybtn.addEventListener('click', () => {
-    addmoney.style.display='block';
-    overlaymoney.style.display='block';
-   
+    addmoney.style.display = 'block';
+    overlaymoney.style.display = 'block';
+
 })
 backbuttonmoney.addEventListener('click', () => {
-    addmoney.style.display='none';
-    overlaymoney.style.display='none';
+    addmoney.style.display = 'none';
+    overlaymoney.style.display = 'none';
 })
