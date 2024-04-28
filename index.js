@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         walletLink.addEventListener('click', function (event) {
             event.preventDefault();
             showPage('wallet');
+            document.querySelector('.sidebar-submenu').classList.toggle('active');
         });
     }
     const paymentLink = document.querySelector('a[href="#payment"]');
@@ -155,3 +156,32 @@ backbuttonmoney.addEventListener('click', () => {
     addmoney.style.display = 'none';
     overlaymoney.style.display = 'none';
 })
+
+const selectAllCheckbox = document.getElementById('select-all-checkbox');
+const selectAllCheckbox1 = document.getElementById('select-all-checkbox1');
+const selectAllCheckbox2 = document.getElementById('select-all-checkbox2');
+const checkboxes = document.querySelectorAll('#booking-recieved .table tbody input[type="checkbox"]');
+const checkboxes1 = document.querySelectorAll('#booking-confirmed .table tbody input[type="checkbox"]');
+const checkboxes2 = document.querySelectorAll('#booking-rejected .table tbody input[type="checkbox"]');
+
+selectAllCheckbox.addEventListener('change', function () {
+  
+    checkboxes.forEach(checkbox => {
+        
+        checkbox.checked = selectAllCheckbox.checked;
+    });
+});
+selectAllCheckbox1.addEventListener('change', function () {
+  
+    checkboxes1.forEach(checkbox => {
+        
+        checkbox.checked = selectAllCheckbox1.checked;
+    });
+});
+selectAllCheckbox2.addEventListener('change', function () {
+  
+    checkboxes2.forEach(checkbox => {
+        
+        checkbox.checked = selectAllCheckbox2.checked;
+    });
+});
