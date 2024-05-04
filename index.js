@@ -66,6 +66,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+document.getElementById('notification-toggle').addEventListener('click', function() {
+    const notification = document.getElementById('notification');
+    notification.classList.toggle('active');
+    document.querySelector('.bottom-nav').classList.toggle('active');
+});
 
 
 document.getElementById('setting').addEventListener('click', event => {
@@ -76,6 +81,7 @@ document.getElementById('setting').addEventListener('click', event => {
 document.querySelector('.mobile-menu-toggle').addEventListener('click', (event) => {
     event.preventDefault();
     document.querySelector('.bottom-nav').classList.toggle('active');
+    notification.classList.remove('active');
 });
 
 

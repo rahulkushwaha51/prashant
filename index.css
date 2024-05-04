@@ -92,10 +92,9 @@ nav {
     background: var(--text-color);
 }
 
-.top-nav a i {
-    background: var(--bg-color-second);
-    border-radius: 50%;
-    padding: .4rem;
+.bottom-nav a i {
+    padding: 0 .3rem;
+    fill: var(--bg-color);
 }
 
 .top-nav li:nth-of-type(2) {
@@ -108,9 +107,9 @@ nav {
     overflow: hidden;
 }
 
-.top-nav li span {
+.bottom-nav li span {
     display: inline-block;
-    transform: rotate(90deg);
+    font-size: .8rem;
 }
 
 .top-nav li img {
@@ -159,6 +158,44 @@ nav {
 .sidebar ul li a:hover {
     color: var(--bg-color-third);
 }
+
+
+/* notification */
+
+
+.notification {
+    position: absolute;
+    width: 25rem;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    display: none;
+}
+.notification.active{
+    display: block;
+}
+.notification h2 {
+    background: var(--bg-color);
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    color: white;
+    
+}
+
+.notification h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 1rem 0;
+}
+
+.notification button {
+    color: var(--bg-color);
+    margin: 1rem 10rem;
+    font-size: 1rem;
+}
+
 
 /* sidebar-submenu */
 
@@ -949,7 +986,7 @@ footer {
     border-bottom: 1px solid rgba(0, 0, 0, 0.146);
 }
 
-.select-all-checkbox{
+.select-all-checkbox {
     display: none;
 }
 
@@ -1076,7 +1113,7 @@ footer {
 }
 
 .table tr th input[type="checkbox"] {
-    margin-right:.3rem ;
+    margin-right: .3rem;
 }
 
 .table th,
@@ -1087,6 +1124,10 @@ footer {
     font-size: 1rem;
 
     color: rgba(0, 0, 0, 0.619);
+}
+
+#booking-confirmed .table thead th:nth-child(1) {
+    width: 8rem;
 }
 
 .popup-container .table td button {
@@ -1759,6 +1800,7 @@ footer {
     background-color: green;
     padding: .2rem .4rem;
     border-radius: .2rem;
+    color: white;
 }
 
 .review-container .review-box {
@@ -1803,7 +1845,7 @@ footer {
 }
 
 .review-container:nth-of-type(3) .star {
-    background: rgb(236, 236, 5);
+    background: rgba(127, 127, 3, 0.667);
 
 }
 
@@ -1829,7 +1871,7 @@ footer {
         left: 0;
         display: none;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-end;
         padding: 1rem 5%;
         gap: 1rem;
         border-bottom: .1rem solid rgb(0, 0, 0, .1);
@@ -1838,6 +1880,10 @@ footer {
     .bottom-nav.active {
         display: flex;
 
+    }
+
+    .notification{
+        width: 100%;
     }
 
     .mobile-menu-toggle {
@@ -2070,7 +2116,7 @@ footer {
         gap: 1rem;
     }
 
-    .select-all-checkbox{
+    .select-all-checkbox {
         display: block;
     }
 
@@ -2225,7 +2271,7 @@ footer {
         display: none;
     }
 
-    .table thead th:nth-child(1){
+    .table thead th:nth-child(1) {
         display: block;
     }
 
@@ -2299,6 +2345,12 @@ footer {
 
 
     /* payment-management */
+
+
+    .payment-management {
+        padding: 1rem .5rem;
+    }
+
     .saved-account {
         flex-direction: column;
         gap: 1rem;
@@ -2308,6 +2360,8 @@ footer {
         text-align: left;
         padding: none;
     }
+
+
 
     /* event-details */
 

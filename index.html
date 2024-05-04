@@ -17,11 +17,6 @@
         </div>
         <nav>
             <ul class="top-nav">
-                <li><a href="#"><i class="fa-regular fa-bell"></i></a></li>
-                <li class="icon">
-                    <img src="./images/image1.jpg" alt="">
-                    <span>&#10095;</span>
-                </li>
                 <button class="mobile-menu-toggle">&#9776;</button>
             </ul>
             <ul class="bottom-nav">
@@ -30,9 +25,24 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#events-details">Events</a></li>
                 <li><a href="#pricing">Pricing</a></li>
-            </ul>
-        </nav>
+                <li><a href="#notification" id="notification-toggle"><i class="fa-solid fa-bell"></i><span>▼</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-user"></i><span>▼</span></a></li>
 
+            </ul>
+
+        </nav>
+        <div class="notification" id="notification">
+            <h2>You have 4 new notification</h2>
+            <h3><i class="fa-solid fa-bell"></i> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Exercitationem, inventore.</h3>
+            <h3><i class="fa-solid fa-bell"></i> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Exercitationem, inventore.</h3>
+            <h3><i class="fa-solid fa-bell"></i> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Exercitationem, inventore.</h3>
+            <h3><i class="fa-solid fa-bell"></i> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Exercitationem, inventore.</h3>
+            <button class="btn-secondry">See More</button>
+        </div>
     </header>
 
     <!-- main content -->
@@ -351,7 +361,8 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th data-label="Select All"><input type="checkbox" id="select-all-checkbox">Select All</th>
+                                        <th data-label="Select All"><input type="checkbox"
+                                                id="select-all-checkbox">Select All</th>
                                         <th data-label="Booking ID">Booking ID</th>
                                         <th data-label="Exhibitor Name">Exhibitor Name</th>
                                         <th data-label="Address">Address</th>
@@ -453,29 +464,29 @@
                             <div class="export-buttons">
                                 <button>
                                     <span>&#60;</span> Back</button>
-                                        <div class="export-buttons-inner">
-                                            <button>Export</button>
-                                            <button>Export All</button>
-                                        </div>
+                                <div class="export-buttons-inner">
+                                    <button>Export</button>
+                                    <button>Export All</button>
+                                </div>
                             </div>
 
                             <div class="pagination">
                                 <button class="first">
                                     <span>&#60;</span><span>&#60;</span> </button>
-                                        <button class="previous">
-                                            <span>&#60;</span> </button>
-                                                <button class="page-number">1</button>
-                                                <button class="page-number">2</button>
-                                                <button class="page-number">3</button>
-                                                <button class="page-number">4</button>
-                                                <button class="page-number">5</button>
-                                                <span>.....</span>
-                                                <button class="page-number">10</button>
-                                                <button class="next">></button>
-                                                <button class="last">>></button>
+                                <button class="previous">
+                                    <span>&#60;</span> </button>
+                                <button class="page-number">1</button>
+                                <button class="page-number">2</button>
+                                <button class="page-number">3</button>
+                                <button class="page-number">4</button>
+                                <button class="page-number">5</button>
+                                <span>.....</span>
+                                <button class="page-number">10</button>
+                                <button class="next">></button>
+                                <button class="last">>></button>
                             </div>
                         </div>
-                       
+
                     </div>
                     <div class="event-section" id="booking-confirmed">
                         <div class="event-search">
@@ -492,7 +503,8 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th data-label="Select All"><input type="checkbox" id="select-all-checkbox1">Select All</th>
+                                        <th data-label="Select All"><input type="checkbox"
+                                                id="select-all-checkbox1">Select All</th>
                                         <th data-label="Booking ID">Booking ID</th>
                                         <th data-label="Exhibitor Name">Exhibitor Name</th>
                                         <th data-label="Address">Address</th>
@@ -539,7 +551,7 @@
                                             Accessories</td>
                                         <td data-label="Booth Number">A 7/11</td>
                                         <td data-label="Hall Number">7</td>
-                                        
+
                                     </tr>
                                     <tr>
                                         <td data-label="Select"><input type="checkbox"></td>
@@ -557,10 +569,10 @@
                                         <td data-label="Products">Boxes,<br>Candle Holders,<br>Planters,<br>Garden
                                             Accessories</td>
                                         <td data-label="Booth Number">A 7/11</td>
-                                        <td data-label="Hall Number">7</td>         
+                                        <td data-label="Hall Number">7</td>
 
                                     </tr>
-                                
+
                                     <tr>
                                         <td data-label="Select"><input type="checkbox"></td>
                                         <td data-label="Booking ID">2024011015-AN</td>
@@ -596,7 +608,7 @@
                                             Accessories</td>
                                         <td data-label="Booth Number">A 7/11</td>
                                         <td data-label="Hall Number">7</td>
-                                        
+
                                     </tr>
                                     <tr>
                                         <td data-label="Select"><input type="checkbox"></td>
@@ -614,36 +626,36 @@
                                         <td data-label="Products">Boxes,<br>Candle Holders,<br>Planters,<br>Garden
                                             Accessories</td>
                                         <td data-label="Booth Number">A 7/11</td>
-                                        <td data-label="Hall Number">7</td>         
+                                        <td data-label="Hall Number">7</td>
 
                                     </tr>
-                               </tbody>
+                                </tbody>
                             </table>
                         </div>
                         <div class="event-section-footer">
                             <div class="export-buttons">
                                 <button>
                                     <span>&#60;</span> Back</button>
-                                        <div class="export-buttons-inner">
-                                            <button>Export</button>
-                                            <button>Export All</button>
-                                        </div>
+                                <div class="export-buttons-inner">
+                                    <button>Export</button>
+                                    <button>Export All</button>
+                                </div>
                             </div>
 
                             <div class="pagination">
                                 <button class="first">
                                     <span>&#60;</span><span>&#60;</span> </button>
-                                        <button class="previous">
-                                            <span>&#60;</span> </button>
-                                                <button class="page-number">1</button>
-                                                <button class="page-number">2</button>
-                                                <button class="page-number">3</button>
-                                                <button class="page-number">4</button>
-                                                <button class="page-number">5</button>
-                                                <span>.....</span>
-                                                <button class="page-number">10</button>
-                                                <button class="next">></button>
-                                                <button class="last">>></button>
+                                <button class="previous">
+                                    <span>&#60;</span> </button>
+                                <button class="page-number">1</button>
+                                <button class="page-number">2</button>
+                                <button class="page-number">3</button>
+                                <button class="page-number">4</button>
+                                <button class="page-number">5</button>
+                                <span>.....</span>
+                                <button class="page-number">10</button>
+                                <button class="next">></button>
+                                <button class="last">>></button>
                             </div>
                         </div>
                     </div>
@@ -663,7 +675,8 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th data-label="Select All"><input type="checkbox" id="select-all-checkbox2">Select All</th>
+                                        <th data-label="Select All"><input type="checkbox"
+                                                id="select-all-checkbox2">Select All</th>
                                         <th data-label="Booking ID">Booking ID</th>
                                         <th data-label="Exhibitor Name">Exhibitor Name</th>
                                         <th data-label="Address">Address</th>
@@ -676,7 +689,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                       
+
                                         <td data-label="Select"><input type="checkbox"></td>
                                         <td data-label="Booking ID">2024011015-AN</td>
                                         <td data-label="Exhibitor Name">
