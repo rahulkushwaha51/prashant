@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const popupbutton = document.querySelector(".popup-btn");
 const popup = document.getElementById('popup');
-const backbutton = document.querySelector(".back-btn")
+const backbutton = document.querySelector(".popup-back-btn")
 const overlay = document.querySelector(".overlay");
 
 popupbutton.addEventListener('click', () => {

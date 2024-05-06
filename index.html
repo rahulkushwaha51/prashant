@@ -25,7 +25,8 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#events-details">Events</a></li>
                 <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#notification" id="notification-toggle"><i class="fa-solid fa-bell"></i><span>▼</span></a></li>
+                <li><a href="#notification" id="notification-toggle"><i class="fa-solid fa-bell"></i><span>▼</span></a>
+                </li>
                 <li><a href="#"><i class="fa-solid fa-user"></i><span>▼</span></a></li>
 
             </ul>
@@ -336,7 +337,8 @@
                             </div>
                         </div>
                         <div class="event-action">
-                            <button class="action-btn">&#60;BACK</button>
+                            <button class="action-btn back-btn">
+                                <i class="fa-solid fa-angle-left"></i>Back</button>
                             <div class="event-action-button">
                                 <button class="btn">PAUSE EVENT</button>
                                 <button class="btn">RESUME EVENT</button>
@@ -462,8 +464,8 @@
 
                         <div class="event-section-footer">
                             <div class="export-buttons">
-                                <button>
-                                    <span>&#60;</span> Back</button>
+                                <button class="back-btn">
+                                    <i class="fa-solid fa-angle-left"></i>Back</button>
                                 <div class="export-buttons-inner">
                                     <button>Export</button>
                                     <button>Export All</button>
@@ -634,8 +636,8 @@
                         </div>
                         <div class="event-section-footer">
                             <div class="export-buttons">
-                                <button>
-                                    <span>&#60;</span> Back</button>
+                                <button class="back-btn">
+                                    <i class="fa-solid fa-angle-left"></i>Back</button>
                                 <div class="export-buttons-inner">
                                     <button>Export</button>
                                     <button>Export All</button>
@@ -711,7 +713,7 @@
                                     </tr>
                                     <tr>
                                         <td data-label="Action">
-                                            <button class="resume-btn">Approve</button>
+                                            <button class="resume-btn">Resume</button>
                                         </td>
                                     </tr>
 
@@ -738,7 +740,7 @@
                                     </tr>
                                     <tr>
                                         <td data-label="Action">
-                                            <button class="resume-btn">Approve</button>
+                                            <button class="resume-btn">Resume</button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -763,7 +765,7 @@
                                     </tr>
                                     <tr>
                                         <td data-label="Action">
-                                            <button class="resume-btn">Approve</button>
+                                            <button class="resume-btn">Resume</button>
                                         </td>
                                     </tr>
 
@@ -775,28 +777,28 @@
 
                         <div class="event-section-footer">
                             <div class="export-buttons">
-                                <button>
-                                    < Back</button>
-                                        <div class="export-buttons-inner">
-                                            <button>Export</button>
-                                            <button>Export All</button>
-                                        </div>
+                                <button class="back-btn">
+                                    <i class="fa-solid fa-angle-left"></i>Back</button>
+                                <div class="export-buttons-inner">
+                                    <button>Export Selected</button>
+                                    <button>Export All</button>
+                                </div>
                             </div>
 
                             <div class="pagination">
                                 <button class="first">
-                                    << </button>
+                                    <&#x3c;< /button>
                                         <button class="previous">
-                                            < </button>
-                                                <button class="page-number">1</button>
-                                                <button class="page-number">2</button>
-                                                <button class="page-number">3</button>
-                                                <button class="page-number">4</button>
-                                                <button class="page-number">5</button>
-                                                <span>.....</span>
-                                                <button class="page-number">10</button>
-                                                <button class="next">></button>
-                                                <button class="last">>></button>
+                                            &#x3c;</button>
+                                        <button class="page-number">1</button>
+                                        <button class="page-number">2</button>
+                                        <button class="page-number">3</button>
+                                        <button class="page-number">4</button>
+                                        <button class="page-number">5</button>
+                                        <span>.....</span>
+                                        <button class="page-number">10</button>
+                                        <button class="next">></button>
+                                        <button class="last">>></button>
                             </div>
                         </div>
                     </div>
@@ -849,9 +851,8 @@
                                 <input type="text" placeholder="Coupon code" />
                                 <button class="btn-secondry">Add More</button>
                             </div>
-                            <button class="btn-secondry back-btn">
-                                <span>&lt;</span> Back
-                            </button>
+                            <button class="back-btn popup-back-btn">
+                                <i class="fa-solid fa-angle-left"></i>Back</button>
                         </div>
                     </div>
                 </div>
@@ -885,9 +886,9 @@
 
                     </div>
                     <div class="events-action-button">
-                        <button class="back-to-events">
-                            < Back</button>
-                                <button class="btn">Export Pdf</button>
+                        <button class="back-btn back-to-events">
+                            <i class="fa-solid fa-angle-left"></i>Back</button>
+                        <button class="btn">Export Pdf</button>
                     </div>
                 </div>
 
@@ -1105,9 +1106,10 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn">Submit <span>&#8594;</span></button>
-                        <button class="back-btn-money">
-                            < Back</button>
+                        <div class="submit-buttons">
+                            <button class="back-btn-money back-btn"> <i class="fa-solid fa-angle-left"></i>Back</button>
+                            <button type="submit" class="btn">Submit <span>&#8594;</span></button>
+                        </div>
                     </form>
 
                 </div>
@@ -1276,9 +1278,9 @@
                 </div>
 
                 <div class="payment-action-button">
-                    <button>
-                        < Back</button>
-                            <button>Payment History <span>→</span></button>
+                    <button class="back-btn">
+                        <i class="fa-solid fa-angle-left"></i>Back</button>
+                    <button>Payment History <span>→</span></button>
                 </div>
             </div>
         </div>
@@ -1291,6 +1293,9 @@
                     <div class="events-overview">
                         <img src="images/v2_216.png" alt="" />
                         <div class="event-details">
+                            <div class="event-details-item">
+                                <button>Active</button>
+                            </div>
                             <div class="event-details-item">
                                 <h4>Event Name</h4>
 
@@ -1305,11 +1310,6 @@
                                 <h4>Event Date</h4>
 
                                 <h4>10-15 January 2024</h4>
-                            </div>
-                            <div class="event-details-item">
-                                <h4>Start Booking Date</h4>
-
-                                <h4>10 October 2023</h4>
                             </div>
                             <div class="event-details-item">
                                 <h4>Event Status</h4>
@@ -1337,7 +1337,7 @@
                             <h2>Reviews & Ratings</h2>
                             <div class="reviews-row">
                                 <div class="reviews-details">
-                                    <p>4.5 <span><i class="fa-solid fa-star"></i></span></p>
+                                    <b>4.5<span><i class="fa-solid fa-star"></i></span></b>
                                     <p>3532 Ratings &</p>
                                     <p>345 Reviews</p>
                                 </div>
@@ -1363,7 +1363,7 @@
                                         <span>65</span>
                                     </div>
                                     <div class="ratings">
-                                        <p>1 <i class="fa-sharp fa-solid fa-star"></i></p>
+                                        <p>1<i class="fa-sharp fa-solid fa-star"></i></p>
                                         <span class="progress"></span>
                                         <span>119</span>
                                     </div>
@@ -1375,7 +1375,7 @@
                                 </div>
                             </div>
                             <div class="review-container">
-                                <span class="star">5 <i class="fa-sharp fa-solid fa-star"></i></span>
+                                <span class="star">5<i class="fa-sharp fa-solid fa-star"></i></span>
                                 <h3>Very good event....highly recommended...</h3>
                                 <p>The fair motivates visitors with its comprehensive and clearly structured product
                                     range and
@@ -1395,14 +1395,14 @@
                                         <P>July,2023</P>
                                     </div>
                                     <div>
-                                        <p><i class="fa-solid fa-thumbs-up"></i>51</p>
+                                        <p><i class="fa-regular fa-thumbs-up"></i>51</p>
                                         <p><i class="fa-regular fa-thumbs-down"></i>7</p>
                                     </div>
 
                                 </div>
                             </div>
                             <div class="review-container">
-                                <span class="star">2 <i class="fa-sharp fa-solid fa-star"></i></span>
+                                <span class="star">2<i class="fa-sharp fa-solid fa-star"></i></span>
                                 <h3>Could be way better</h3>
                                 <p>Looking for better customer support in future..</p>
                                 <div class="review-by">
@@ -1413,14 +1413,14 @@
                                         <P>July,2023</P>
                                     </div>
                                     <div>
-                                        <p><i class="fa-solid fa-thumbs-up"></i>51</p>
+                                        <p><i class="fa-regular fa-thumbs-up"></i>51</p>
                                         <p><i class="fa-regular fa-thumbs-down"></i>7</p>
                                     </div>
 
                                 </div>
                             </div>
                             <div class="review-container">
-                                <span class="star">1 <i class="fa-sharp fa-solid fa-star"></i></span>
+                                <span class="star">1<i class="fa-sharp fa-solid fa-star"></i></span>
                                 <h3>Disappointed with this edition</h3>
                                 <p>Hoping for market improvment by the upcoming edition</p>
 
@@ -1437,7 +1437,7 @@
                                         <P>July,2023</P>
                                     </div>
                                     <div>
-                                        <p><i class="fa-solid fa-thumbs-up"></i>51</p>
+                                        <p><i class="fa-regular fa-thumbs-up"></i>51</p>
                                         <p><i class="fa-regular fa-thumbs-down"></i>7</p>
                                     </div>
                                 </div>

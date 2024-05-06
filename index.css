@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,600;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,600;1,900&display=swap');
 
 /* ---------general css ---------- */
 
@@ -35,7 +35,7 @@
 .btn-secondry {
     background: transparent;
     color: rgba(0, 0, 0);
-    font-weight: 800;
+    font-weight: 600;
     cursor: pointer;
 }
 
@@ -54,6 +54,30 @@ a {
 
 button {
     cursor: pointer;
+}
+
+.filter-btn {
+    padding: .2rem .5rem;
+    background-color: var(--bg-color-second);
+}
+
+.back-btn {
+    display: block;
+    font-size: 1rem;
+    background: transparent;
+    color: rgba(0, 0, 0, 0.46);
+    /* padding: 1rem; */
+    font-weight: 600;
+}
+
+.back-btn i {
+    display: inline-block;
+    font-size: .6rem;
+    margin-right: .1rem;
+    font-weight: bolder;
+    vertical-align: top;
+    padding-top: .3rem;
+
 }
 
 /* ---------- navigation css -------- */
@@ -171,9 +195,11 @@ nav {
     background-color: white;
     display: none;
 }
-.notification.active{
+
+.notification.active {
     display: block;
 }
+
 .notification h2 {
     background: var(--bg-color);
     width: 100%;
@@ -181,7 +207,7 @@ nav {
     font-weight: 600;
     padding: 1rem;
     color: white;
-    
+
 }
 
 .notification h3 {
@@ -232,7 +258,7 @@ nav {
 #content {
     min-height: 100dvh;
     width: 100%;
-    padding: 3rem 2rem 0 16%;
+    padding: 0 2rem 0 16%;
 }
 
 /* hero section */
@@ -273,14 +299,14 @@ nav {
 
 .user-name p {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     padding-top: 1rem;
     color: rgba(0, 0, 0, 0.619);
 }
 
 .user-name p i {
-    font-size: 1.6rem;
-    width: 2rem;
+    font-size: 1.1rem;
+    width: 1rem;
 }
 
 .user-name p a {
@@ -390,7 +416,7 @@ nav {
 .home-event-card-details button span {
     padding-left: .5rem;
     width: 3rem;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .news {
@@ -445,7 +471,7 @@ nav {
 footer {
     background-color: var(--bg-color);
     color: var(--text-color);
-    padding: 5rem 9% 0;
+    padding: 5rem 4% 0;
     z-index: 1;
     position: relative;
 }
@@ -487,7 +513,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2.5rem;
+    padding: 1rem 4.5rem;
 }
 
 .social-icons {
@@ -545,6 +571,10 @@ footer {
 
 .social-media a i {
     padding-left: .9rem;
+}
+
+.top-arrow {
+    padding-right: 3rem;
 }
 
 .copyright {
@@ -634,7 +664,7 @@ footer {
 
 .event-buttons span {
     display: block;
-    font-weight: 800;
+    font-weight: 600;
     color: var(--bg-color-second);
     text-align: left;
 
@@ -701,7 +731,7 @@ footer {
 }
 
 .events-overview img {
-    height: 16rem;
+    height: 13rem;
     width: 22rem;
     border-radius: .5rem;
 }
@@ -710,12 +740,11 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    width: 45%;
+    width: 60%;
 }
 
 .event-details-item {
     display: flex;
-    justify-content: center;
     align-items: flex-start;
     color: rgba(0, 0, 0, 0.46);
 }
@@ -726,7 +755,7 @@ footer {
 
 .event-details-item h4 {
     margin: 0;
-    flex: 1;
+    flex: 1 2;
     position: relative;
 }
 
@@ -744,16 +773,16 @@ footer {
     cursor: pointer;
 }
 
-.events-overview .event-details-item:nth-child(1) h4:nth-child(2) {
+.events-overview:nth-child(1) .event-details-item:nth-child(1) h4:nth-child(2) {
     color: black;
 }
 
-.events-overview .event-details-item:nth-child(2) h4:nth-child(2) {
+.events-overview:nth-child(1) .event-details-item:nth-child(2) h4:nth-child(2) {
     color: black;
 }
 
 
-.event-details-item:nth-child(6) h4:nth-child(2) {
+.events-overview .event-details-item:nth-child(6) h4:nth-child(2) {
     color: green;
 }
 
@@ -767,7 +796,7 @@ footer {
     content: ":";
     position: absolute;
     top: 0;
-    left: 60%;
+    left: 70%;
 }
 
 
@@ -813,6 +842,7 @@ footer {
 
 .col h5:nth-child(1) {
     color: var(--bg-color);
+    width: 3rem;
 }
 
 .progress {
@@ -850,18 +880,14 @@ footer {
 .event-action {
     padding: 2rem 0;
     display: flex;
-    gap: 5rem;
+    justify-content: space-between;
+    padding-right: 6rem;
 }
 
 .event-action button {
     font-size: 1rem;
 }
 
-.action-btn {
-    background: transparent;
-    color: rgba(0, 0, 0, 0.46);
-    font-weight: 800;
-}
 
 .event-action-button {
     display: flex;
@@ -934,7 +960,18 @@ footer {
     border-bottom: 2px solid rgba(0, 0, 0, 0.146);
 }
 
+.table tbody tr {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.146);
+}
 
+.table tbody tr:last-child {
+    border-bottom: none;
+}
+
+#booking-rejected .table tbody tr:nth-child(odd),
+#booking-recieved .table tbody tr:nth-child(odd) {
+    border-bottom: none;
+}
 
 .row {
     display: flex;
@@ -1016,7 +1053,7 @@ footer {
 
 .export-buttons button {
     font-size: 1rem;
-    font-weight: 800;
+    font-weight: 600;
     color: rgba(0, 0, 0, 0.46);
     background: transparent;
 }
@@ -1109,7 +1146,7 @@ footer {
 .table thead th {
     border-bottom: 2px solid rgba(0, 0, 0, 0.345);
     color: black;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .table tr th input[type="checkbox"] {
@@ -1145,7 +1182,7 @@ footer {
     color: green;
 }
 
-.paused {
+.popup .paused {
     color: red;
 }
 
@@ -1176,13 +1213,7 @@ footer {
     font-weight: 600;
 }
 
-.back-btn {
-    display: block;
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    color: rgba(0, 0, 0, 0.46);
-    padding: 1rem;
-}
+
 
 .analytics {
     display: none;
@@ -1260,13 +1291,6 @@ footer {
     padding: 2rem 0;
 }
 
-.back-to-events {
-    background: transparent;
-    color: rgba(0, 0, 0, 0.491);
-    margin: 1rem 1rem;
-    font-weight: 800;
-    font-size: 1.2rem;
-}
 
 /* wallet */
 
@@ -1296,7 +1320,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 2rem;
+    padding: 2rem 0 1rem;
 }
 
 .wallet-container .table thead tr {
@@ -1395,7 +1419,7 @@ footer {
     width: 65%;
     height: max-content;
     margin: 5%;
-    padding: 5rem;
+    padding: 2rem 5rem;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.619);
 }
 
@@ -1412,7 +1436,7 @@ footer {
 .payment-acc-from {
     display: flex;
     padding: 1rem 0;
-    gap: 5rem;
+    gap: 3rem;
     border-bottom: 2px solid var(--bg-color-second);
 }
 
@@ -1445,7 +1469,7 @@ footer {
 
 .form .btn {
     padding: .5rem 2rem;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 }
 
 .form-row {
@@ -1495,15 +1519,12 @@ footer {
     left: -9999px;
 }
 
-.back-btn-money {
-    background: transparent;
-    display: block;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: rgb(0, 0, 0, .6);
-    padding: 1rem 0;
-    margin: 0;
+.submit-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
 }
+
 
 /* payment */
 
@@ -1619,18 +1640,6 @@ footer {
     color: green;
 }
 
-.paused {
-    color: red;
-}
-
-
-.back-btn {
-    display: block;
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    color: rgba(0, 0, 0, 0.46);
-    padding: 1rem 4rem;
-}
 
 /* payment-management */
 #appearence {
@@ -1726,7 +1735,7 @@ footer {
 }
 
 .events-container {
-    padding: 1rem 2rem;
+    padding: 0;
 }
 
 .events-container h1 {
@@ -1736,6 +1745,31 @@ footer {
 
 .events-container .events-overview .event-details {
     border-bottom: 1px solid rgba(0, 0, 0, 0.562);
+}
+
+.events-container .events-overview:nth-child(1) .event-details .event-details-item:nth-child(1) button {
+    color: white;
+    background: green;
+    padding: .3rem 1rem;
+    border-radius: .2rem;
+    margin-bottom: 1rem;
+
+}
+
+.events-container .events-overview .event-img img {
+    margin-bottom: 1rem;
+}
+
+.events-container .events-overview:nth-child(1) .event-details .event-details-item:nth-child(2) h4:nth-child(2) {
+    color: rgb(0, 0, 0, .46);
+}
+
+.events-container .events-overview:nth-child(1) .event-details .event-details-item:nth-child(5) h4:nth-child(2) {
+    color: green;
+}
+
+.events-container .events-overview:nth-child(1) .event-details .event-details-item:nth-child(6) h4:nth-child(2) {
+    color: var(--bg-color);
 }
 
 .events-review .event-img {
@@ -1753,12 +1787,10 @@ footer {
     gap: .5rem;
 }
 
-.reviews-details .ratings {
-    display: flex;
-    gap: .5rem;
+.reviews-details i {
+    font-size: .6rem;
+    transform: translateY(-2px);
 }
-
-
 
 
 .reviews-details .ratings:nth-child(1) .progress::after {
@@ -1803,6 +1835,13 @@ footer {
     color: white;
 }
 
+.review-container .star i {
+    font-size: .5rem;
+    display: inline-block;
+    transform: translateY(-2px);
+}
+
+
 .review-container .review-box {
     padding: 2rem 0;
     display: flex;
@@ -1844,8 +1883,8 @@ footer {
     color: white;
 }
 
-.review-container:nth-of-type(3) .star {
-    background: rgba(127, 127, 3, 0.667);
+S .review-container:nth-of-type(3) .star {
+    background: rgba(218, 218, 5, 0.986);
 
 }
 
@@ -1882,7 +1921,7 @@ footer {
 
     }
 
-    .notification{
+    .notification {
         width: 100%;
     }
 
@@ -2081,8 +2120,9 @@ footer {
     }
 
     .event-action {
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding-top: 1rem;
+        padding-right: 0;
         gap: 1rem;
     }
 
@@ -2233,13 +2273,6 @@ footer {
         padding-left: 1rem;
     }
 
-    .back-btn {
-        text-align: center;
-        display: block;
-        margin-bottom: 3rem;
-        padding: 1rem;
-    }
-
     .add-coupon input[type="text"] {
         width: 100%;
         margin: 1rem 0;
@@ -2335,14 +2368,6 @@ footer {
     .payment-heading {
         display: block;
     }
-
-
-    .back-btn {
-        text-align: center;
-        display: block;
-        margin-bottom: 3rem;
-    }
-
 
     /* payment-management */
 
