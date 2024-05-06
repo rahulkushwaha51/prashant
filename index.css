@@ -59,6 +59,14 @@ button {
 .filter-btn {
     padding: .2rem .5rem;
     background-color: var(--bg-color-second);
+    border-radius: .2rem;
+    display: flex;
+    gap: .3rem;
+    align-items: center;
+}
+
+.filter-btn span i {
+    vertical-align: middle;
 }
 
 .back-btn {
@@ -937,21 +945,7 @@ footer {
     gap: 2rem;
 }
 
-.event-search-btn button {
-    background: transparent;
-    display: flex;
-    align-items: center;
-    gap: .2rem;
-    font-weight: 600;
-    font-size: 1rem;
-}
 
-.event-search-btn button span {
-    display: inline-block;
-    font-size: 1.5rem;
-    font-weight: 500;
-    transform: rotate(90deg);
-}
 
 /* booking recieved */
 .table-container {
@@ -1559,20 +1553,6 @@ footer {
     color: rgba(0, 0, 0, 0.769);
 }
 
-.payment-heading button {
-    padding: 0 .2rem;
-    border-radius: .2rem;
-    background: var(--bg-color-second);
-    font-size: .8rem;
-    height: max-content;
-}
-
-.payment-heading span {
-    display: inline-block;
-    transform: rotate(90deg);
-    color: #000;
-}
-
 .payment .table {
     width: 100%;
     padding: 1rem 2rem;
@@ -1627,9 +1607,6 @@ footer {
     background-color: green;
 }
 
-.payment .table td:nth-child(2) {
-    border-right: 2px solid rgba(0, 0, 0, 0.619);
-}
 
 .table .payment-to {
     display: flex;
@@ -1712,15 +1689,6 @@ footer {
     padding-left: .5rem;
 }
 
-.payment-action-button button:nth-child(1) {
-    display: inline-block;
-    background: transparent;
-    outline: none;
-    border-radius: .2rem;
-    font-weight: 700;
-    color: rgba(0, 0, 0, 0.532);
-    font-size: 1.2rem;
-}
 
 
 /* event-details */
