@@ -851,6 +851,7 @@ footer {
 .col h5:nth-child(1) {
     color: var(--bg-color);
     width: 3rem;
+    cursor: pointer;
 }
 
 .progress {
@@ -966,6 +967,8 @@ footer {
 #booking-recieved .table tbody tr:nth-child(odd) {
     border-bottom: none;
 }
+
+
 
 .row {
     display: flex;
