@@ -72,6 +72,12 @@ document.getElementById('notification-toggle').addEventListener('click', functio
     document.querySelector('.bottom-nav').classList.toggle('active');
 });
 
+document.getElementById('profile-submenu-toggle').addEventListener('click', function() {
+    const profilesubmenu = document.getElementById('profile-submenu');
+    profilesubmenu.classList.toggle('active');
+    document.querySelector('.bottom-nav').classList.toggle('active');
+});
+
 
 document.getElementById('setting').addEventListener('click', event => {
     event.preventDefault();

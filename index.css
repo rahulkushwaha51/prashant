@@ -125,8 +125,10 @@ nav {
 }
 
 .bottom-nav a i {
-    padding: 0 .3rem;
+    display: inline-block;
+    padding: 0 .1rem;
     fill: var(--bg-color);
+    vertical-align: top;
 }
 
 .top-nav li:nth-of-type(2) {
@@ -141,7 +143,9 @@ nav {
 
 .bottom-nav li span {
     display: inline-block;
-    font-size: .8rem;
+    font-size: .5rem;
+    vertical-align: top;
+    padding-top: .2rem;
 }
 
 .top-nav li img {
@@ -204,6 +208,7 @@ nav {
     display: none;
 }
 
+
 .notification.active {
     display: block;
 }
@@ -228,6 +233,37 @@ nav {
     color: var(--bg-color);
     margin: 1rem 10rem;
     font-size: 1rem;
+}
+
+.profile-submenu {
+    position: absolute;
+    width: 10rem;
+    top: 100%;
+    right: 5rem;
+    background-color: white;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    border: 2px solid rgba(0, 0, 0, 0.427);
+    display: none;
+}
+
+.profile-submenu.active {
+    display: block;
+}
+
+.profile-submenu li {
+    padding: .5rem 0;
+}
+
+.profile-submenu li a {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.769);
+}
+
+.profile-submenu li i {
+    display: inline-block;
+    padding-right: .5rem;
 }
 
 
@@ -969,7 +1005,6 @@ footer {
 }
 
 
-
 .row {
     display: flex;
     justify-content: space-between;
@@ -1144,10 +1179,12 @@ footer {
     border-bottom: 2px solid rgba(0, 0, 0, 0.345);
     color: black;
     font-weight: 600;
+    width: 6rem;
 }
 
 .table tr th input[type="checkbox"] {
     margin-right: .3rem;
+    vertical-align: middle;
 }
 
 .table th,
@@ -2259,6 +2296,15 @@ S .review-container:nth-of-type(3) .star {
         text-align: right;
     }
 
+    #booking-recieved .table tbody tr:nth-child(even) td{
+       display: none;
+    }
+    #booking-recieved .table tbody tr:nth-child(even) td:nth-child(8){
+       display: block;
+    }
+    #booking-recieved .table tbody tr:nth-child(even) td:nth-child(9){
+       display: block;
+    }
 
     /* payment */
     .payment .table {
@@ -2277,7 +2323,10 @@ S .review-container:nth-of-type(3) .star {
 
     .table thead th:nth-child(1) {
         display: block;
+        width: 100%;
     }
+
+
 
     .table,
     .table tr,
@@ -2285,6 +2334,10 @@ S .review-container:nth-of-type(3) .star {
         width: 100%;
         display: inline-block;
         position: relative;
+    }
+
+    .table tr th input[type='checkbox'] {
+        vertical-align: baseline;
     }
 
     .payment-container .table tr td:last-child {
